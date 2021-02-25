@@ -15,7 +15,7 @@ Pytorch implementation for Flow Field Reduction via Reconstructing Vector Data f
 python3 XXX.py --dataset '5cp' 
 ```
 
--Stage II training
+- Stage II training
 ```
 python3 XXX.py --dataset '5cp'
 
