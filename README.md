@@ -9,6 +9,9 @@ Pytorch implementation for Flow Field Reduction via Reconstructing Vector Data f
 - Numpy
 - Pytorch >= 1.0.1
 
+## Data preparation
+A .txt file contains two lines. The first line contains the position informaton in the traced streamlines. The second line contains the velocity information in the traced streamlines.
+
 ## Training models
 - Stage I training
 ```
