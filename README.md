@@ -31,7 +31,7 @@ python3 low_init.py
 
 - Stage II training
 
-The input is the positions and velocitties of sample points along the traced streamlines and a low-resolution vector field generated at stage I. The output is a recovered high-resolution vector field.
+The input is the positions and velocitties of sample points along the traced streamlines and the low-resolution vector field generated at stage I. The output is a recovered high-resolution vector field.
 ```
 python3 high_refine.py
 ```
