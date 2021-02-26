@@ -10,7 +10,7 @@ Pytorch implementation for Flow Field Reduction via Reconstructing Vector Data f
 - Pytorch = 0.4.0
 
 ## Data preparation
-Two binary files are requires for the input. The first one is the position informaton in the traced streamlines. The second one is the velocity information in the traced streamlines.
+Binary files are required for the input. The first are the position informaton in the traced each streamline. The second are the velocity information in the traced each streamline.
 
 ## Training models
 ```
