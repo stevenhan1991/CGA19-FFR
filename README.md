@@ -1,7 +1,7 @@
-# Flow-Field-Reduction-via-Reconstructing-Vector-Data-from-3D-Streamlines-Using-Deep-Learning
+# Flow Field Reduction via Reconstructing Vecto Data from 3D Streamlines Using Deep Learning
 Pytorch implementation for Flow Field Reduction via Reconstructing Vector Data from 3D Streamlines Using Deep Learning
 
-In our code, we provide an exmaple to recovering the five critical points vector field. The dimension of this data set is 51 by 51 by 51.
+In our code, we provide an exmaple of recovering the five critical points vector field. The dimension of this data set is 51 by 51 by 51.
 
 ## Prerequisites
 - Linux
