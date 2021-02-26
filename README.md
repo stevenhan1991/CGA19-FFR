@@ -21,10 +21,9 @@ python3 low_init.py
 - Stage II training
 ```
 python3 high_refine.py
-
 ```
 
-## Bibetx 
+## Citation 
 ```
 @article{han2019flow,
   title={Flow field reduction via reconstructing vector data from 3{d} streamlines using deep learning},
