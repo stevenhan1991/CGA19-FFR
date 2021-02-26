@@ -11,7 +11,7 @@ In our code, we provide an example of recovering the five critical points vector
 - Pytorch = 0.4.0
 
 ## Data preparation
-2k binary files are required for the model training (k is the number of traced streamlines). The first k files store the positions of sample points along the traced streamlines. The second k files store the corresponding velocities of sample points along the traced streamlines.
+2n binary files are required for the model training (n is the number of traced streamlines). The first k files store the positions of sample points along the traced streamlines. The second k files store the corresponding velocities of sample points along the traced streamlines.
 
 ## Data format
 Each position binary file is stored as a 1d array: [x_1,y_1,z_1,x_2,y_2,z_2,...,x_n,y_n,z_n]. Similarly, each velocity binary file is stored as: [u_1,v_1,w_1,u_2,v_2,w_2,...,u_n,v_n,w_n].
@@ -24,14 +24,14 @@ cd code
 
 - Stage I training
 
-The input is the positions and velocitties of sample points along the traced streamlines. The output is a recovered low-resolution vector field.
+The input is the positions and velocities of sample points along the traced streamlines. The output is a recovered low-resolution vector field.
 ```
 python3 low_init.py 
 ```
 
 - Stage II training
 
-The input is the positions and velocitties of sample points along the traced streamlines and the low-resolution vector field generated at stage I. The output is a recovered high-resolution vector field.
+The input is the positions and velocities of sample points along the traced streamlines and the low-resolution vector field generated at Stage I. The output is a recovered high-resolution vector field.
 ```
 python3 high_refine.py
 ```
