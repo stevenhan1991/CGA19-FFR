@@ -48,8 +48,8 @@ def GetData(pos_folder,vec_folder,num_of_streamlines,dim_high,dim_low):
 	pos = []
 	vec = []
 	for i in range(1,num_of_streamlines+1):
-		pos_array = np.fromfile(pos_folder+'pos'+'{:3d}'+'.dat',dtype='<f')
-		vec_array = np.fromfile(vec_folder+'vec'+'{:3d}'+'.dat',dtype='<f')
+		pos_array = np.fromfile(pos_folder+'pos'+'{:03d}'.format(i)+'.dat',dtype='<f')
+		vec_array = np.fromfile(vec_folder+'vec'+'{:03d}'.format(i)+'.dat',dtype='<f')
 
 		assert len(pos_array) == len(vec_array)
 

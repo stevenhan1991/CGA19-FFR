@@ -17,6 +17,10 @@ parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='disables CUDA training')
 parser.add_argument('--epochs', type=int, default=100, metavar='N',
                     help='number of epochs to train (default: 100)')
+parser.add_argument('--pos_path', type=str, default='../pos/', metavar='N',
+                    help='the path where the pos files store')
+parser.add_argument('--vec_path', type=str, default='../vec/', metavar='N',
+                    help='the path where the vec files store')
 parser.add_argument('--result_path', type=str, default='../result/', metavar='N',
                     help='the path where we stroe the result')
 
