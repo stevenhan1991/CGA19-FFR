@@ -7,23 +7,22 @@ Pytorch implementation for Flow Field Reduction via Reconstructing Vector Data f
 - CUDA >= 10.0
 - Python >= 3.6
 - Numpy
-- Pytorch >= 1.0.1
+- Pytorch = 0.4.0
 
 ## Data preparation
-A .txt file contains two lines. The first line contains the position informaton in the traced streamlines. The second line contains the velocity information in the traced streamlines.
+Two binary files are requires for the input. The first one is the position informaton in the traced streamlines. The second one is the velocity information in the traced streamlines.
 
 ## Training models
 - Stage I training
 ```
-python3 XXX.py --dataset '5cp' 
+python3 low_init.py 
 ```
 
 - Stage II training
 ```
-python3 XXX.py --dataset '5cp'
+python3 high_refine.py
 
 ```
-
 
 ## Bibetx 
 ```
