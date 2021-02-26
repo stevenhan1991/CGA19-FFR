@@ -23,7 +23,8 @@ cd code
 ```
 
 - Stage I training
-The input 
+
+The input is the position and velocity informtion from the traced streamlines. 
 ```
 python3 low_init.py 
 ```
