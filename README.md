@@ -14,7 +14,7 @@ In our code, we provide an exmaple of recovering the five critical points vector
 Binary files are required for the model training. The first are the position informaton in the traced each streamline. The second are the velocity information in the traced each streamline.
 
 ## Data format
-Each position bbinary file is stored as a 1d array: [x_1,y_1,z_1,x_2,y_2,z_2,...,x_n,y_n,z_n]. Similarly, each velocity binary file is stored as: [u_1,v_1,w_1,u_2,v_2,w_2,...,u_n,v_n,w_n].
+Each position binary file is stored as a 1d array: [x_1,y_1,z_1,x_2,y_2,z_2,...,x_n,y_n,z_n]. Similarly, each velocity binary file is stored as: [u_1,v_1,w_1,u_2,v_2,w_2,...,u_n,v_n,w_n].
 
 
 ## Training models
