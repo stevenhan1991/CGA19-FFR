@@ -16,7 +16,9 @@ parser.add_argument('--lr', type=float, default=1e-4, metavar='LR',
 parser.add_argument('--no-cuda', action='store_true', default=False,
                     help='disables CUDA training')
 parser.add_argument('--epochs', type=int, default=100, metavar='N',
-                    help='number of epochs to train (default: 5000)')
+                    help='number of epochs to train (default: 100)')
+parser.add_argument('--result_path', type=str, default='../result/', metavar='N',
+                    help='the path where we stroe the result')
 
 args = parser.parse_args()
 print(not args.no_cuda)
@@ -135,18 +137,21 @@ def train(epochs,low_res,streamline_array,vecs_array):
 			adjust_learning_rate(optimizer,itera)
 		if itera%50==0:
 			vector_field = model(low_res)
-			saveVectorfield(vector_field)
+			saveVectorfield(vector_field,args)
 
 
 
 def main():
 	dim_low = [51,51,51]
 	dim_high = [51,51,51]
+	low_res = np.fromfile(args.result_path+'vec.dat',dtype='<f')
+	low_res = low_res.reshape(dim_low[2],dim_low[1],dim_low[0],3,1).transpose()
+	low_res = torch.FloatTensor(low_res)
 	streamline_array,vecs_array = GetData(args.pos_path,args.vec_path,args.num,dim_high,dim_low)
 	model = line2vector(dim_high)
 	if args.cuda:
 		model.cuda()
-	train(model,args.epochs,streamline_array,vecs_array)
+	train(model,low_res,args.epochs,streamline_array,vecs_array)
 
 if __name__== "__main__":
     main()
