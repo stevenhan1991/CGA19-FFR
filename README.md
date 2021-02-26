@@ -14,7 +14,7 @@ In our code, we provide an example of recovering the five critical points vector
 2n binary files are required for the model training (n is the number of traced streamlines). The first n files store the positions of sample points along the traced streamlines. The second n files store the corresponding velocities of sample points along the traced streamlines.
 
 ## Data format
-Each position binary file is stored as a 1d array: [x_1,y_1,z_1,x_2,y_2,z_2,...,x_n,y_n,z_n]. Similarly, each velocity binary file is stored as: [u_1,v_1,w_1,u_2,v_2,w_2,...,u_n,v_n,w_n].
+Each position binary file is stored as a 1d array: [x_1,y_1,z_1,x_2,y_2,z_2,...,x_k,y_k,z_k]. Similarly, each velocity binary file is stored as: [u_1,v_1,w_1,u_2,v_2,w_2,...,u_k,v_k,w_k].
 
 
 ## Training models
